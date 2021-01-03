@@ -1,1 +1,1 @@
-[{"quantity":2,"author":"Antique Author","title":"Antique Book","barcode":"1b29bce8-4ceb-11eb-ae93-0242ac130002","releaseYear":1785,"pricePerUnit":2.0},{"quantity":2,"author":"Gosling","title":"Java","barcode":"d0f5e344-4cfa-11eb-ae93-0242ac130002","releaseYear":5,"pricePerUnit":2.5}]
+[{"quantity":2,"author":"Antique Author","title":"Antique Book","barcode":"1b29bce8-4ceb-11eb-ae93-0242ac130002","releaseYear":1785,"pricePerUnit":2.0},{"quantity":2,"author":"Gosling","title":"Java","barcode":"d0f5e344-4cfa-11eb-ae93-0242ac130002","releaseYear":1905,"pricePerUnit":2.5}]
