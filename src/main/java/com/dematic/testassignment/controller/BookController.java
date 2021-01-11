@@ -195,7 +195,7 @@ public class BookController {
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
                 }
 
-                if(releaseYear.isPresent() && releaseYear.get() > 1900) {
+                if(releaseYear.isPresent() && releaseYear.get() > AntiqueBook.AGE_MAX_VALUE) {
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
                 }
 
@@ -219,7 +219,8 @@ public class BookController {
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
                 }
 
-                if(scienceIndex.isPresent() && (scienceIndex.get() > 10 || scienceIndex.get() < 1)) {
+                if(scienceIndex.isPresent() && (scienceIndex.get() > ScienceJournal.INDEX_MAX_VALUE ||
+                        scienceIndex.get() < ScienceJournal.INDEX_MIN_VALUE)) {
                     return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
                 }
 

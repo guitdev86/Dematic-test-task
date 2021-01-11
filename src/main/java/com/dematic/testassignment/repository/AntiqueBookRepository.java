@@ -73,7 +73,7 @@ public class AntiqueBookRepository{
         JSONObject newBookObj = (JSONObject) newBookArray.get(0);
         AntiqueBook newBookInstance = antiqueBookParser.parseBookObject(newBookObj);
 
-        if(checkIfBookIsOnTheList(newBookInstance) == 0) {
+        if(checkIfBookIsOnTheList(newBookInstance) == 0 && newBookInstance.getReleaseYear() < AntiqueBook.AGE_MAX_VALUE) {
             bookStorage.add(newBookInstance);
             fileIO.writeToFile(antiqueBookParser.parseArrayListToJSONArray(bookStorage),
                     this.path);

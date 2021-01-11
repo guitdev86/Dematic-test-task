@@ -74,7 +74,9 @@ public class ScienceJournalRepository {
         JSONObject newBookObj = (JSONObject) newBookArray.get(0);
         ScienceJournal newBookInstance = scienceJournalParser.parseBookObject(newBookObj);
 
-        if(checkIfBookIsOnTheList(newBookInstance) == 0) {
+        if(checkIfBookIsOnTheList(newBookInstance) == 0 &&
+                (newBookInstance.getScienceIndex() > ScienceJournal.INDEX_MIN_VALUE &&
+                        newBookInstance.getScienceIndex() < ScienceJournal.INDEX_MAX_VALUE)) {
             bookStorage.add(newBookInstance);
             fileIO.writeToFile(scienceJournalParser.parseArrayListToJSONArray(bookStorage),
                     this.path);
