@@ -1,4 +1,4 @@
-#Overview:
+# Overview:
 The book storage system is based on controller-service-repository architecture. Controller section is responsible for all basic CRUD operations and special endpoint mentioned below. Repository section is responsible for saving/retrieving and managing records. Files contain information in JSON format. Service layer is left for possible extension. There is a main class of Book in the system. Antique Books and Science Journals are child classes of Book class. There are 3 types of books in the system: Regular books, Science Journals, Ancient books:
 
 * Regular books have **"title", "author", "quantity", "pricePerUnit"** fields.
@@ -8,7 +8,7 @@ The book storage system is based on controller-service-repository architecture. 
 * Ancient books have **"title", "author", "quantity", "pricePerUnit", "scienceIndex"** fields
 
 All the books "barcodes" are **UUID type**. All barcodes are have to be unique.
-#Endpoints:
+# Endpoints:
 * **GET /books** endpoint is responsible for getting all the books (including antique and science journals) in a single list.
 * **GET /books/{barcode}** endpoint returns a particular book based on the book "barcode" in UUID format
 * **GET /books/{barcode}/total-price** endpoint gets the selected book total price.
